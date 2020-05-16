@@ -12,13 +12,15 @@ import aikif.lib.cls_filelist as fl
 pth = 'D:\\docs\\Unreal Projects'
 op_file = 'files_ue4.txt'
 
+just_summ = 'Y'
+
 def main():
     lst = get_next_subfolders(pth)
     print('folders = ', lst)
     for folder in lst:
-        get_project_details(folder)
+        get_project_details(folder, just_summ)
 
-def get_project_details(folder):
+def get_project_details(folder, sum_only='N'):
     top_level_folders = get_next_subfolders(os.path.join(pth, folder))
     content_folder = '.'  
 
@@ -32,7 +34,10 @@ def get_project_details(folder):
     else:
         content_folder = os.path.join(pth, folder)
 
-    assetts_folders = get_next_subfolders(content_folder)
+    if sum_only == 'N':
+        assetts_folders = get_next_subfolders(content_folder)
+    else:
+        assetts_folders = []
 
     files, tot_files, tot_size = get_all_files(content_folder)
     print(folder, str(tot_size) + ' MB (' + str(tot_files) + ' files). Assets = ',assetts_folders )
