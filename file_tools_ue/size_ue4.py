@@ -18,21 +18,21 @@ def main():
     lst = get_next_subfolders(pth)
     print('folders = ', lst)
     for folder in lst:
-        get_project_details(folder, just_summ)
+        get_project_details(pth, folder, just_summ)
 
-def get_project_details(folder, sum_only='N'):
-    top_level_folders = get_next_subfolders(os.path.join(pth, folder))
+def get_project_details(base_path, folder, sum_only='N'):
+    top_level_folders = get_next_subfolders(os.path.join(base_path, folder))
     content_folder = '.'  
 
     if len(top_level_folders) > 1:
-        content_folder = os.path.join(pth, folder, 'Content')
+        content_folder = os.path.join(base_path, folder, 'Content')
     elif len(top_level_folders) == 1:
         try:
-            content_folder = os.path.join(pth, folder, top_level_folders[0], 'Content')
+            content_folder = os.path.join(base_path, folder, top_level_folders[0], 'Content')
         except Exception as ex:
             print('no Content folder found')
     else:
-        content_folder = os.path.join(pth, folder)
+        content_folder = os.path.join(base_path, folder)
 
     if sum_only == 'N':
         assetts_folders = get_next_subfolders(content_folder)
@@ -41,7 +41,7 @@ def get_project_details(folder, sum_only='N'):
 
     files, tot_files, tot_size = get_all_files(content_folder)
     print(folder, str(tot_size) + ' MB (' + str(tot_files) + ' files). Assets = ',assetts_folders )
-
+    return assetts_folders
     
 def get_all_files(start_path):   
     """
