@@ -4,6 +4,36 @@ utils_3d
 Utilities for 3D modelling work - UE4 and blender scripts
 
 
+File Size Checks for UE4
+-----------------
+
+Gets total size of folders and lists of assets used in your Unreal Engine Projects
+
+```
+pth = 'D:\\docs\\Unreal Projects'
+op_file = 'files_ue4.txt'
+
+just_summ = 'Y'
+
+def main():
+    lst = get_next_subfolders(pth)
+    print('folders = ', lst)
+    for folder in lst:
+        get_project_details(pth, folder, just_summ)
+```
+
+gets the list of UE4 files and looks in the Contents folder of each project to find the list of assets and total asset size
+
+
+```
+BATTLE 3045 MB (1325 files). Assets =  []
+BLAST 28668 MB (14156 files). Assets =  []
+DrivableCars 17060 MB (6271 files). Assets =  []
+FPS1 3067 MB (1179 files). Assets =  []
+FPS_Starter 2689 MB (706 files). Assets =  []
+
+```
+
 Git for UE4
 -----------------
 
