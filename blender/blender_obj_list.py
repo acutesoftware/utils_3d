@@ -26,7 +26,7 @@ def save_report(res):
         f.write("#Filename = " + fname + ',,,,,,,,,,\n')
         f.write("#Date = DATE,,,,,,,,,,\n")
         f.write("#Columns, Location,,, Dimensions,,, Scale,,,\n")
-        f.write("Name, loc_x, loc_y, loc_z, dim_x, dim_y, dim_z, sc_x,sc_y,sc_z\n")
+        f.write("Name, loc_x, loc_y, loc_z, dim_x, dim_y, dim_z, sc_x,sc_y,sc_z,\n")
         
         for line in res:
             f.write(line[0] + ',')
