@@ -17,4 +17,4 @@ Run the script to get object stats by
 
 The "Appliance_amplifier" example CSV is based on the blend file below
 
-![Appliance_amplifier](appliance_amplifier03.png.PNG "Appliance_amplifier")
+![Appliance_amplifier](appliance_amplifier03.PNG "Appliance_amplifier")
