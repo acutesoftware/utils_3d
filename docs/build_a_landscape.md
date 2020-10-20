@@ -13,7 +13,9 @@ Add trees and flowers
 Setup lighting by dropping in a nice sky
 Add some animals
 Drop in sounds
-[img]UE4_game_sanct_shed_side2.PNG[/img]
+
+![Sample image of landscape in UE4](UE4_game_sanct_shed_side2.PNG "Sample image of landscape in UE4")
+
      
 
 ### Setup Unreal Engine and download the assets you need
