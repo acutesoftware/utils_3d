@@ -15,6 +15,7 @@ This stuff is complex and videos are a great way to learn, but dont forget to *f
 It is unlikely you will be deploying your game to a million users any month soon, so dont get distracted by the optimal way of doing things - if it works, that is a good start. Your only job at this stage is to know how you did it, and why it works.
 
 ## Blueprint Errors
+General tip - if you try something that is supposed to work, and it doesnt - save and close the blueprint then reload it. UE is usually very good with keeping up to date with changes, but 1/100 times you will be scratching your head and then when you reload the project it all works.
 
 ### How do I know what to cast to? 
 
