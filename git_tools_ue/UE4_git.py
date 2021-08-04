@@ -15,14 +15,14 @@ from shutil import copyfile
 import aikif.lib.cls_filelist as fl 
 
 # project specific details
-pth = 'D:\\docs\\Unreal Projects\\sanct'
+pth = 'E:\\UE4_proj\\sanct'
 proj_name = 'sanct'
 
 # choose folders in your Content folder to check
 # (idea is to ignore all the add on packs like Megascans)
 my_folders = ['\\Content\\_DJM\\', 
               '\\Config\\', 
-              '\\Content\\Maps\\'
+              '\\Saved\\Screenshot\\'
              ]
 
 # git specific variables
