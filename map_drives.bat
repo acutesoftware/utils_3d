@@ -5,3 +5,4 @@ net use p: \\fangorn\photo
 net use s: \\fangorn\incoming
 net use u: \\fangorn\user\duncan\C\user
 net use w: \\fangorn\Marita
+echo Drives mapped - start InfoLink from taskbar manually

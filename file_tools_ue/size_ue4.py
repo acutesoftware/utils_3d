@@ -9,10 +9,10 @@ import sys
 from shutil import copyfile
 import aikif.lib.cls_filelist as fl 
 
-pth = 'D:\\docs\\Unreal Projects'
+pth = r'E:\UE4_proj'
 op_file = 'files_ue4.txt'
 
-just_summ = 'Y'
+just_summ = 'N'
 
 def main():
     lst = get_next_subfolders(pth)
