@@ -20,26 +20,36 @@ def main():
 
 def find_strings(raw_srch_term):
     raw = []
-    srch_terms = raw_srch_term.upper().split(' ')
+    srch_terms, excluded = get_search_terms_and_excluded(raw_srch_term.upper().split(' '))
     num_terms = len(srch_terms)
     print(srch_terms)
+    print(excluded)
     with open(search_file, 'r') as fip:
         for line in fip:
             found = 0
             for srch_term in srch_terms:
                 if srch_term in line.upper():
                     found += 1
-                    #print('srch_term[0:1] = ', srch_term[0:1])
-                    if srch_term[0:1] == '-':
-                        print('srch_term[1:]', srch_term[1:])
-                        if srch_term[1:] in line.upper():
-                            print('excluding ' + srch_term[1:])
+                    for excluded_term in excluded:
+                        if excluded_term in line.upper():
+                            #print('EXCLUDING srch_term = ', srch_term)
                             found = -99
+                
 
 
             if found == num_terms:
                 raw.append(line)
     return raw
+
+def get_search_terms_and_excluded(srch):
+    excluded = []
+    search_terms = []
+    for s in srch:
+        if s.startswith('-'):
+            excluded.append(s[1:])
+        else:
+            search_terms.append(s)
+    return search_terms, excluded
 
 def get_short_name(raw_result):
     """
