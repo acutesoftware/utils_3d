@@ -56,5 +56,17 @@ SK_Mannequin.uasset (4055032) in folder E:\UE4_proj\adventure\Content\Zombie\Ani
 found 6 results for SK_Mannequin \adventure\ -PhysicsAsset
 
 ```
+To find a list of projects using an asset, you can use a similar search term above to limit that asset to a search across all projects.
 
+```
+PS D:\dev\src\utils_3d\file_tools_ue> python .\fue.py SK_Mannequin -PhysicsAsset \Content\Zombie\       
+SK_Mannequin.uasset (4055032) in folder E:\UE4_proj\adventure\Content\Zombie\AnimDemoScene\Mesh
+SK_Mannequin.uasset (4055032) in folder E:\UE4_proj\BLAST\BLAST\Content\Zombie\AnimDemoScene\Mesh
+SK_Mannequin.uasset (4055032) in folder E:\UE4_proj\DrivableCars\Content\Zombie\AnimDemoScene\Mesh
+SK_Mannequin.uasset (4055032) in folder E:\UE4_proj\izzy_horror\Content\Zombie\AnimDemoScene\Mesh
+SK_Mannequin.uasset (4055032) in folder E:\UE4_proj\Monster_425\Content\Zombie\AnimDemoScene\Mesh
+SK_Mannequin.uasset (4055032) in folder E:\UE4_proj\TEST_CHARACTER_MESH\Content\Zombie\AnimDemoScene\Mesh
+found 6 results for SK_Mannequin -PhysicsAsset \Content\Zombie\
+
+```
 
