@@ -16,7 +16,7 @@ just_summ = 'N'
 
 def main():
     lst = get_next_subfolders(pth)
-    print('folders = ', lst)
+    #print('folders = ', lst)
     for folder in lst:
         get_project_details(pth, folder, just_summ)
 
@@ -40,7 +40,10 @@ def get_project_details(base_path, folder, sum_only='N'):
         assetts_folders = []
 
     files, tot_files, tot_size = get_all_files(content_folder)
-    print(folder, str(tot_size) + ' MB (' + str(tot_files) + ' files). Assets = ',assetts_folders )
+    if sum_only != 'N':
+        print(folder, str(tot_size) + ' MB (' + str(tot_files) + ' files)' )
+    else:
+        print(folder, str(tot_size) + ' MB (' + str(tot_files) + ' files). Assets = ',assetts_folders )
     return assetts_folders
     
 def get_all_files(start_path):   
