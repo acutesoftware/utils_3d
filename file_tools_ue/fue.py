@@ -9,6 +9,7 @@ import sys
 
 pth = r'E:\UE4_proj'
 search_file = 'files_ue4.txt'
+search_file = 'files_ue4_sanct.txt'
 
 def main():
     srch_term = ' '.join(sys.argv[1:])

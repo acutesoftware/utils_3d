@@ -11,7 +11,7 @@ import os
 import sys 
 import aikif.lib.cls_filelist as fl 
 
-max_line_size = 20000
+max_line_size = 50000
 folder = r'D:\dev\src\utils_3d\test\test_data'
 orig_filelist = 'files_to_split.csv'
 
@@ -19,7 +19,10 @@ def main():
     print('splitting files in ' + folder)
     fl_to_split = fl.FileList([folder], ['*.*'], [],  orig_filelist).get_list()
     for file in fl_to_split:
-        split_file(str(file))
+        if '.SPLIT_' in file:
+            print('ignoring file already split - ' + file)
+        else:
+            split_file(str(file))
 
 def split_file(fname):
     print(' splitting - ' + fname)
